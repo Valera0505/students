@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Tokanov</title>
+
+</head>
+<body>
+<form method="post" id="searchForm">
+    <select name="searchby" id="searchby" >
+        <option value="id">id</option>
+        <option value="name">name</option>
+        <option value="surname">surname</option>
+        <option value="group">group</option>
+        <option value="addmitedYear">addmitedYear</option>
+    </select>
+    <input type="text" name="searchInput" id="searchInput">
+    <button type="submit">Search</button>
+</form>
+<table>
+    <thead>
+    <th>id</th>
+    <th>name</th>
+    <th>surname</th>
+    <th>group</th>
+    <th>addmitedYear</th>
+    </thead>
+    <tbody>
+    <%for(let i = 0; i<students.length; i++){%>
+    <tr>
+        <td><%= students[i].id%></td>
+        <td><%= students[i].name%></td>
+        <td><%= students[i].surname%></td>
+        <td><%= students[i].group%></td>
+        <td><%= students[i].addmitedYear%></td>
+    </tr>
+    <%}%>
+    </tbody>
+</table>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js%22%3E"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>
